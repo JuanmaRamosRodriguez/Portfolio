@@ -4,13 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Mangaka': ['Mangaka', 'sans-serif'],
         'Cinzel': ['Cinzel', 'sans-serif'],
         'Quantify': ['Quantify', 'sans-serif'],
         'Hand': ['RedHand', 'sans-serif'],
-        'Astral': ['Astral', 'sans-serif'],
-        'Space': ['Space', 'sans-serif'],
-        'SecondSpace': ['SecondSpace', 'sans-serif']
+        'Orbitron': ['Orbitron', 'sans-serif']
       },
       backgroundImage: {
         'fondo': "url('src/assets/images/imagenDeFondo.png')",

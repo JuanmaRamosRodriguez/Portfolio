@@ -9,16 +9,37 @@ export class AppComponent {
   title = 'portfolio';
   parallaxUp: string = 'translate3d(0, 0, 0)';
   parallaxDown: string = 'translate3d(0, 0, 0)';
+  isMobile: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event) {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    // Efecto parallax hacia arriba
-    this.parallaxUp = `translate3d(0, ${scrollTop * -0.6}px, 0)`;
-    // Efecto parallax hacia abajo
-    this.parallaxDown = `translate3d(0, ${scrollTop * 0.1}px, 0)`;
+    if (!this.isMobile) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      // Efecto parallax arriba
+      this.parallaxUp = `translate3d(0, ${scrollTop * -0.6}px, 0)`;
+      // Efecto parallax abajo
+      this.parallaxDown = `translate3d(0, ${scrollTop * 0.1}px, 0)`;
+    }
   }
-  // Animación del boton
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: Event) {
+    this.checkIfMobile();
+  }
+
+  ngOnInit() {
+    this.checkIfMobile();
+  }
+
+  checkIfMobile() {
+    this.isMobile = window.innerWidth < 768;
+    if (this.isMobile) {
+      this.parallaxUp = 'translate3d(0, 0, 0)'; // Desactiva el parallax arriba
+      this.parallaxDown = 'translate3d(0, 0, 0)'; // Desactiva el parallax abajo
+    }
+  }
+
+  // Animación del botón
   scrollToNextSection() {
     const nextSection = document.getElementById('next-section');
     if (!nextSection) return;
@@ -26,7 +47,7 @@ export class AppComponent {
     const targetPosition = nextSection.getBoundingClientRect().top + window.scrollY;
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
-    const duration = 1200; 
+    const duration = 1200;
     let startTime: number | null = null;
 
     const easeInOutQuad = (t: number) => {

@@ -24,12 +24,12 @@
     <div
       class="absolute inset-0 flex justify-center items-center text-center md:justify-start md:items-start md:text-left md:mt-32">
       <div class="mx-4 md:ml-32 md:mt-32">
-        <h3 class="text-xl md:text-4xl font-Space mb-5 [text-shadow:2px_2px_4px]">Hola, soy </h3>
-        <h1 class="text-2xl md:text-6xl font-Space text-[#39F2AE] mb-5 [text-shadow:2px_2px_4px_#39F2AE] animate-glow">
+        <h3 class="text-xl md:text-5xl font-Orbitron mb-5 [text-shadow:2px_2px_4px]">Hola, soy </h3>
+        <h1 class="text-2xl md:text-8xl font-Orbitron text-[#39F2AE] mb-5 [text-shadow:2px_2px_4px_#39F2AE] animate-glow">
           <p>Juan Manuel</p>
           <p>Ramos Rodríguez</p>
         </h1>
-        <h3 class="text-xl md:text-4xl font-Space [text-shadow:2px_2px_4px]">Desarrollador Web</h3>
+        <h3 class="text-xl md:text-5xl font-Orbitron [text-shadow:2px_2px_4px]">Desarrollador Web</h3>
       </div>
     </div>
 
@@ -52,12 +52,12 @@
 
   <!-- Contenido -->
   <div class="flex flex-wrap  p-16 md:p-16" [ngStyle]="{
-  'background-attachment': 'fixed',
+  'background-attachment': isMobile ? 'scroll' : 'fixed',
   'transform': parallaxDown
 }">
     <!-- Herramientas -->
     <section id="next-section" class="flex flex-col items-center w-full md:w-1/2 flex-1 mb-8 md:mb-0">
-      <h2 class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-Space [text-shadow:2px_2px_10px_#39F2AE]">
+      <h2 class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-Orbitron [text-shadow:2px_2px_10px_#39F2AE]">
         Herramientas de Desarrollo
       </h2>
       <div
@@ -360,7 +360,7 @@
       <!-- Base de Datos -->
       <section class="flex flex-col items-center w-full flex-1 mb-8 md:mb-0">
         <h2
-          class="text-[#39F2AE] p-2.5 text-sm md:text-xl text-center font-SecondSpace [text-shadow:2px_2px_10px_#39F2AE]">
+          class="text-[#39F2AE] p-2.5 text-sm md:text-2xl text-center font-Orbitron [text-shadow:2px_2px_10px_#39F2AE]">
           Lenguajes/Tecnologías
         </h2>
         <div
@@ -499,7 +499,7 @@
 
       <!-- BBDD -->
       <section class="flex flex-col items-center w-full flex-1 mb-8 md:mb-0">
-        <h2 class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-Space [text-shadow:2px_2px_10px_#39F2AE]">
+        <h2 class="text-[#39F2AE] p-2.5 text-lg md:text-3xl text-center font-Orbitron [text-shadow:2px_2px_10px_#39F2AE]">
           Base de Datos
         </h2>
         <div
@@ -620,7 +620,7 @@
     <!-- Frameworks -->
     <section class="flex flex-col items-center w-full md:w-1/2 flex-1 mb-8 md:mb-0">
       <h2
-        class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-SecondSpace [text-shadow:2px_2px_10px_#39F2AE]">
+        class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-Orbitron [text-shadow:2px_2px_10px_#39F2AE]">
         Frameworks y Entornos
       </h2>
       <div
@@ -807,13 +807,13 @@
     <div class="flex flex-col justify-center items-center min-h-screen p-8 md:p-16">
       <div
         class="p-6 md:p-8 w-full max-w-2xl mx-auto border-2 border-[#39F2AE] bg-black/20 [clip-path:polygon(66%_4%,85%_4%,88%_0,100%_0,100%_100%,6%_100%,0_94%,0_18%,0_0,62%_0);]">
-        <h1 class="text-base md:text-4xl font-bold text-white mb-6 md:mb-10 font-Space">Sobre mi</h1>
+        <h1 class="text-base md:text-4xl font-bold text-white mb-6 md:mb-10 font-Orbitron">Sobre mi</h1>
         <p class="text-white mb-6 md:mb-14 text-sm md:text-2xl -tracking-wide font-Cinzel [text-shadow:2px_2px_3px]">
-          Desarrollador frontend junior, en constante aprendizaje, con experiencia en proyectos personales
+          Desarrollador frontend junior, en constante aprendizaje, con experiencia en proyectos personales.
         </p>
         <p class="text-white mb-6 md:mb-14 text-sm md:text-2xl -tracking-wide font-Cinzel [text-shadow:2px_2px_3px]">
           En busca de una oportunidad para aplicar mis habilidades en Angular como Desarrollador de Frontend y crecer
-          tanto personal como profesionalmente pese a mi poca experiencia laboral
+          tanto personal como profesionalmente.
         </p>
         <blockquote class="text-[#39F2AE] text-base md:text-xl italic border-l-4 border-[#39F2AE] pl-4 mb-4">
           “Compilando sueños, depurando errores”
@@ -835,11 +835,11 @@
       <!-- Enlaces de LinkedIn y GitHub -->
       <div class="flex justify-center space-x-6">
         <a href="https://www.linkedin.com/in/juan-manuel-ramos-rodriguez/"
-          class="text-[#39F2AE] hover:text-blue-400 transition duration-500 text-sm font-Space">
+          class="text-[#39F2AE] hover:text-blue-400 transition duration-500 text-sm font-Orbitron">
           LinkedIn
         </a>
         <a href="https://github.com/juanmanuelramosrodriguez"
-          class="text-[#39F2AE] hover:text-purple-400 transition duration-500 text-sm font-Space">
+          class="text-[#39F2AE] hover:text-purple-400 transition duration-500 text-sm font-Orbitron">
           GitHub
         </a>
       </div>
