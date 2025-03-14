@@ -1,2 +1,2 @@
 # Portfolio
-Portfolio para mostrar mis habilidades como Front Developer
+Portfolio para mostrar y desarrollar mis conocimientos como Web Developer

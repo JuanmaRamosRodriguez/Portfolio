@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/*FUENTES*/
+@font-face {
+  font-family: Mangaka;
+  src: url('assets/fonts/Mangaka.otf');
+}
+@font-face {
+  font-family: Cinzel;
+  src: url('assets/fonts/Cinzel.otf');
+}
+@font-face {
+  font-family: Quantify;
+  src: url('assets/fonts/Quantify.ttf');
+}
+@font-face{
+  font-family: Astral;
+  src: url('assets/fonts/Astral.ttf');
+}
+@font-face{
+  font-family: RedHand;
+  src: url('assets/fonts/RedHands.ttf');
+}
+@font-face{
+  font-family: Space;
+  src: url('assets/fonts/Space.otf');
+}
+@font-face{
+  font-family: SecondSpace;
+  src: url('assets/fonts/SecondSpace.otf');
+}

@@ -1,0 +1,98 @@
+
+/*--------------
+INICIO DEL MENU
+---------------*/
+
+
+/*.titleBanner{
+  color: white;
+  font-family: Cinzel;
+  text-align: center;
+  margin-bottom: 15px;
+  background-color: black;
+}
+
+.titleBanner-large{
+  font-size: 30px;
+}
+.titleBanner-small{
+  font-size: 20px;
+}
+.titleBanner-large, .titleBanner-small{
+  color: white;
+  transition: transform 0.8s;
+
+}
+.titleBanner-large:hover,.titleBanner-small:hover{
+  color: yellowgreen;
+  transform: scale(0.9);
+  cursor: none;
+
+}
+*/
+
+
+
+/*----------------------
+INICIO CONTENIDO: CARTAS
+-----------------------*/
+/*.sub-tech{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.5));
+  background-color: azure;
+
+}
+.sub-tech p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  font-family: Cinzel;
+}
+.titleCards{
+  padding: 10px;
+  font-family: Quantify;
+  font-size: larger;
+  transition: transform 0.5s;
+  text-align: center;
+
+}
+.titleCards:hover{
+  transform: scale(1.2);
+  cursor: none;
+}
+.img-technologies{
+  height: 50px;
+  width: 50px;
+  transition: transform 0.8s ;
+}
+.img-technologies:hover{
+  transform: scale(0.8);
+  cursor:none;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  width: 100%;
+  flex: 1;
+
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  gap: 20px; /* Espacio entre elementos en la columna
+}
+*/
+
+/*FIN CONTENIDO: CARTAS*/
+
+
+
+

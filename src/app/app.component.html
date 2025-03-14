@@ -1,0 +1,854 @@
+<html lang="es" class="bg-fondo bg-contain bg-fixed w-full">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" src="app.component.css">
+  <meta name="description" content="Portfolio de Juan Manuel Ramos Rodríguez, desarrollador web.">
+  <meta name="author" content="Juan Manuel Ramos Rodríguez">
+  <meta property="og:title" content="Portfolio de Juan Manuel Ramos Rodríguez">
+  <meta property="og:description" content="Conoce más sobre mis proyectos y habilidades como desarrollador web.">
+</head>
+
+<body>
+  <!--Fondo y encabezado del portfolio-->
+  <header class="text-[#ffffff] text-center relative" [ngStyle]="{
+    'background-attachment': 'fixed',
+    'transform': parallaxUp
+  }">
+
+    <!-- Contenido de texto -->
+    <div
+      class="absolute inset-0 flex justify-center items-center text-center md:justify-start md:items-start md:text-left md:mt-32">
+      <div class="mx-4 md:ml-32 md:mt-32">
+        <h3 class="text-xl md:text-4xl font-Space mb-5 [text-shadow:2px_2px_4px]">Hola, soy </h3>
+        <h1 class="text-2xl md:text-6xl font-Space text-[#39F2AE] mb-5 [text-shadow:2px_2px_4px_#39F2AE] animate-glow">
+          <p>Juan Manuel</p>
+          <p>Ramos Rodríguez</p>
+        </h1>
+        <h3 class="text-xl md:text-4xl font-Space [text-shadow:2px_2px_4px]">Desarrollador Web</h3>
+      </div>
+    </div>
+
+    <!-- Botón e imagen -->
+    <div class="relative h-screen">
+      <div class="hidden md:block">
+        <img src="../assets/foto-perfil.jpg" alt="Imagen"
+          class="h-screen object-cover transform scale-x-[-1] ml-0 md:ml-[850px] [filter:drop-shadow(4px_4px_20px_#0a0a0a)] transition duration-500 hover:[filter:drop-shadow(4px_4px_40px_#0a0a0a)]">
+      </div>
+      <div class="inset-0  justify-center items-center md:-mt-24 relative hidden md:block">
+        <button (click)="scrollToNextSection()"
+          class="text-[#39F2AE] font-bold text-4xl md:text-8xl rounded transition duration-500 ease-in-out transform hover:scale-75">
+          <img src="../assets/images/flecha.png" alt="Flecha abajo">
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Contenido -->
+  <div class="flex flex-wrap  p-16 md:p-16" [ngStyle]="{
+  'background-attachment': 'fixed',
+  'transform': parallaxDown
+}">
+    <!-- Herramientas -->
+    <section id="next-section" class="flex flex-col items-center w-full md:w-1/2 flex-1 mb-8 md:mb-0">
+      <h2 class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-Space [text-shadow:2px_2px_10px_#39F2AE]">
+        Herramientas de Desarrollo
+      </h2>
+      <div
+        class="flex flex-wrap justify-center items-center gap-5  drop-shadow-lg p-4 border-2 border-[#39F2AE] bg-black/20 [clip-path:polygon(0_0,93%_0,100%_5%,100%_100%,4%_100%,0_94%,0_70%,2%_60%,2%_18%,0_13%)] ">
+        <div class="flex flex-col items-left gap-5">
+          <!-- Github -->
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/github-mark-white.png" alt="Github">Github
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrellas vacías -->
+              <div class="flex">
+                <!-- Estrella con mitad rellena y mitad vacía -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                  <!-- Mitad izquierda rellena -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                  <!-- Mitad derecha vacía (solo borde) -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                  <!-- Definir clip-path para la mitad izquierda -->
+                  <clipPath id="half-star-left">
+                    <rect x="0" y="0" width="12" height="24" />
+                  </clipPath>
+
+                  <!-- Definir clip-path para la mitad derecha -->
+                  <clipPath id="half-star-right">
+                    <rect x="12" y="0" width="12" height="24" />
+                  </clipPath>
+                </svg>
+              </div>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/visualstudio.png" alt="Visual Studio Code">VisualStudio
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrella vacías -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/figma-logo.png" alt="Figma">Figma
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrella vacías -->
+              <div class="flex">
+                <!-- Estrella con mitad rellena y mitad vacía -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                  <!-- Mitad izquierda rellena -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                  <!-- Mitad derecha vacía (solo borde) -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                  <!-- Definir clip-path para la mitad izquierda -->
+                  <clipPath id="half-star-left">
+                    <rect x="0" y="0" width="12" height="24" />
+                  </clipPath>
+
+                  <!-- Definir clip-path para la mitad derecha -->
+                  <clipPath id="half-star-right">
+                    <rect x="12" y="0" width="12" height="24" />
+                  </clipPath>
+                </svg>
+              </div>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/penpot.png" alt="Penpot">Penpot
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrella vacías -->
+              <div class="flex">
+                <!-- Estrella con mitad rellena y mitad vacía -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                  <!-- Mitad izquierda rellena -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                  <!-- Mitad derecha vacía (solo borde) -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                  <!-- Definir clip-path para la mitad izquierda -->
+                  <clipPath id="half-star-left">
+                    <rect x="0" y="0" width="12" height="24" />
+                  </clipPath>
+
+                  <!-- Definir clip-path para la mitad derecha -->
+                  <clipPath id="half-star-right">
+                    <rect x="12" y="0" width="12" height="24" />
+                  </clipPath>
+                </svg>
+              </div>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/postman.png" alt="Postman">Postman
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrellas vacías -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/jira.png" alt="Jira">Jira
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrellas vacías -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/asana.png" alt="Asana">Asana
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrellas vacías -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/docker.png" alt="Docker">Docker
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrellas vacías -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Base de Datos, Lenguajes y Tencnologías -->
+    <div class="flex flex-col w-full md:w-1/2">
+      <!-- Base de Datos -->
+      <section class="flex flex-col items-center w-full flex-1 mb-8 md:mb-0">
+        <h2
+          class="text-[#39F2AE] p-2.5 text-sm md:text-xl text-center font-SecondSpace [text-shadow:2px_2px_10px_#39F2AE]">
+          Lenguajes/Tecnologías
+        </h2>
+        <div
+          class="flex flex-wrap justify-center items-center gap-5  drop-shadow-lg p-4 border-2 border-[#39F2AE] bg-black/20 [clip-path:polygon(0_0,100%_0,100%_35%,100%_85%,75%_100%,0_100%,0_44%,4%_36%,4%_26%,0_19%)]">
+          <div class="flex flex-col items-left gap-5">
+            <p
+              class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+              <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+                src="../assets/images/logo/html5.png" alt="HTML5">HTML5
+              <span class="flex ml-auto">
+                <!-- Estrellas rellenas -->
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <!-- Estrella con borde negro y sin relleno -->
+                <div class="flex">
+                  <!-- Estrella con mitad rellena y mitad vacía -->
+                  <svg class="w-6 h-6" viewBox="0 0 24 24">
+                    <!-- Mitad izquierda rellena -->
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                    <!-- Mitad derecha vacía (solo borde) -->
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                    <!-- Definir clip-path para la mitad izquierda -->
+                    <clipPath id="half-star-left">
+                      <rect x="0" y="0" width="12" height="24" />
+                    </clipPath>
+
+                    <!-- Definir clip-path para la mitad derecha -->
+                    <clipPath id="half-star-right">
+                      <rect x="12" y="0" width="12" height="24" />
+                    </clipPath>
+                  </svg>
+                </div>
+              </span>
+            </p>
+            <p
+              class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+              <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+                src="../assets/images/logo/css.png" alt="CSS">CSS
+              <span class="flex ml-auto">
+                <!-- Estrellas rellenas -->
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <!-- Estrella con borde negro y sin relleno -->
+                <div class="flex">
+                  <!-- Estrella con mitad rellena y mitad vacía -->
+                  <svg class="w-6 h-6" viewBox="0 0 24 24">
+                    <!-- Mitad izquierda rellena -->
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                    <!-- Mitad derecha vacía (solo borde) -->
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                    <!-- Definir clip-path para la mitad izquierda -->
+                    <clipPath id="half-star-left">
+                      <rect x="0" y="0" width="12" height="24" />
+                    </clipPath>
+
+                    <!-- Definir clip-path para la mitad derecha -->
+                    <clipPath id="half-star-right">
+                      <rect x="12" y="0" width="12" height="24" />
+                    </clipPath>
+                  </svg>
+                </div>
+              </span>
+            </p>
+            <p
+              class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+              <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+                src="../assets/images/logo/java-logo.png" alt="Java">Java
+              <span class="flex ml-auto">
+                <!-- Estrellas rellenas -->
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <!-- Estrellas vacías -->
+                <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BBDD -->
+      <section class="flex flex-col items-center w-full flex-1 mb-8 md:mb-0">
+        <h2 class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-Space [text-shadow:2px_2px_10px_#39F2AE]">
+          Base de Datos
+        </h2>
+        <div
+          class="flex flex-wrap justify-center items-center gap-5  drop-shadow-lg p-4 border-2 border-[#39F2AE] bg-black/20 [clip-path:polygon(0_0,100%_0,_100%_35%,100%_85%,75%_100%,0_100%,0_80%,3%_71%,3%_60%,0_54%);]">
+          <div class="flex flex-col items-left gap-5">
+            <p
+              class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+              <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+                src="../assets/images/logo/mysql.png" alt="MySQL">MySQL
+              <span class="flex ml-auto">
+                <!-- Estrellas rellenas -->
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <div class="flex">
+                  <!-- Estrella con mitad rellena y mitad vacía -->
+                  <svg class="w-6 h-6" viewBox="0 0 24 24">
+                    <!-- Mitad izquierda rellena -->
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                    <!-- Mitad derecha vacía (solo borde) -->
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                    <!-- Definir clip-path para la mitad izquierda -->
+                    <clipPath id="half-star-left">
+                      <rect x="0" y="0" width="12" height="24" />
+                    </clipPath>
+
+                    <!-- Definir clip-path para la mitad derecha -->
+                    <clipPath id="half-star-right">
+                      <rect x="12" y="0" width="12" height="24" />
+                    </clipPath>
+                  </svg>
+                </div>
+                <!-- Estrellas vacías -->
+                <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </span>
+            </p>
+            <p
+              class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+              <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+                src="../assets/images/logo/mondodb.png" alt="MongoDB">MongoDB
+              <span class="flex ml-auto">
+                <!-- Estrellas rellenas -->
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <!-- Estrellas vacías -->
+                <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </span>
+            </p>
+            <p
+              class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+              <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+                src="../assets/images/logo/oracle.png" alt="Oracle">Oracle
+              <span class="flex ml-auto">
+                <!-- Estrellas rellenas -->
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <!-- Estrella con borde negro y sin relleno -->
+                <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Frameworks -->
+    <section class="flex flex-col items-center w-full md:w-1/2 flex-1 mb-8 md:mb-0">
+      <h2
+        class="text-[#39F2AE] p-2.5 text-lg md:text-2xl text-center font-SecondSpace [text-shadow:2px_2px_10px_#39F2AE]">
+        Frameworks y Entornos
+      </h2>
+      <div
+        class="flex flex-wrap justify-center items-center gap-5 drop-shadow-lg p-4 border-2 border-[#39F2AE] bg-black/20 [clip-path:polygon(0_0,71%_0,100%_0,100%_87%,83%_100%,0_100%,0_76%,2%_73%,2%_68%,0_65%);]">
+        <div class="flex flex-col items-left gap-5">
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/angular-logo.png" alt="Angular">Angular
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <div class="flex">
+                <!-- Estrella con mitad rellena y mitad vacía -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                  <!-- Mitad izquierda rellena -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                  <!-- Mitad derecha vacía (solo borde) -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                  <!-- Definir clip-path para la mitad izquierda -->
+                  <clipPath id="half-star-left">
+                    <rect x="0" y="0" width="12" height="24" />
+                  </clipPath>
+
+                  <!-- Definir clip-path para la mitad derecha -->
+                  <clipPath id="half-star-right">
+                    <rect x="12" y="0" width="12" height="24" />
+                  </clipPath>
+                </svg>
+              </div>
+              <!-- Estrella con borde negro y sin relleno -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/tailwindLogo.png" alt="TailwindCSS">Tailwind
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <!-- Estrella con borde negro y sin relleno -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/nodejs-logo.png" alt="NodeJS">NodeJS
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <div class="flex">
+                <!-- Estrella con mitad rellena y mitad vacía -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                  <!-- Mitad izquierda rellena -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                  <!-- Mitad derecha vacía (solo borde) -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                  <!-- Definir clip-path para la mitad izquierda -->
+                  <clipPath id="half-star-left">
+                    <rect x="0" y="0" width="12" height="24" />
+                  </clipPath>
+
+                  <!-- Definir clip-path para la mitad derecha -->
+                  <clipPath id="half-star-right">
+                    <rect x="12" y="0" width="12" height="24" />
+                  </clipPath>
+                </svg>
+              </div>
+              <!-- Estrellas vacías -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+          <p
+            class="flex items-center gap-2.5 m-2.5 font-cinzel text-white [text-shadow:2px_1px_15px] text-xl font-bold font-RedHands">
+            <img class="h-12 w-12 transition duration-1000 hover:scale-75 hover:cursor-none"
+              src="../assets/images/logo/bootstrap-logo.png" alt="Bootstrap">Bootstrap
+            <span class="flex ml-auto">
+              <!-- Estrellas rellenas -->
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <svg class="w-6 h-6 text-[#39F2AE]" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <div class="flex">
+                <!-- Estrella con mitad rellena y mitad vacía -->
+                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                  <!-- Mitad izquierda rellena -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="#39F2AE" clip-path="url(#half-star-left)" />
+
+                  <!-- Mitad derecha vacía (solo borde) -->
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    fill="none" stroke="#39F2AE" stroke-width="1" clip-path="url(#half-star-right)" />
+
+                  <!-- Definir clip-path para la mitad izquierda -->
+                  <clipPath id="half-star-left">
+                    <rect x="0" y="0" width="12" height="24" />
+                  </clipPath>
+
+                  <!-- Definir clip-path para la mitad derecha -->
+                  <clipPath id="half-star-right">
+                    <rect x="12" y="0" width="12" height="24" />
+                  </clipPath>
+                </svg>
+              </div>
+              <!-- Estrella con borde negro y sin relleno -->
+              <svg class="w-6 h-6 text-transparent" stroke="#39F2AE" stroke-width="1" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--Sobre Mi-->
+  <!-- HACER RESPONSIVE -->
+  <div class="flex flex-col p-8 md:p-16">
+    <div class="flex flex-col justify-center items-center min-h-screen p-8 md:p-16">
+      <div
+        class="p-6 md:p-8 w-full max-w-2xl mx-auto border-2 border-[#39F2AE] bg-black/20 [clip-path:polygon(66%_4%,85%_4%,88%_0,100%_0,100%_100%,6%_100%,0_94%,0_18%,0_0,62%_0);]">
+        <h1 class="text-base md:text-4xl font-bold text-white mb-6 md:mb-10 font-Space">Sobre mi</h1>
+        <p class="text-white mb-6 md:mb-14 text-sm md:text-2xl -tracking-wide font-Cinzel [text-shadow:2px_2px_3px]">
+          Desarrollador frontend junior, en constante aprendizaje, con experiencia en proyectos personales
+        </p>
+        <p class="text-white mb-6 md:mb-14 text-sm md:text-2xl -tracking-wide font-Cinzel [text-shadow:2px_2px_3px]">
+          En busca de una oportunidad para aplicar mis habilidades en Angular como Desarrollador de Frontend y crecer
+          tanto personal como profesionalmente pese a mi poca experiencia laboral
+        </p>
+        <blockquote class="text-[#39F2AE] text-base md:text-xl italic border-l-4 border-[#39F2AE] pl-4 mb-4">
+          “Compilando sueños, depurando errores”
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Footer-->
+  <footer class="bg-black/50 text-white py-8">
+    <div class="container mx-auto text-center">
+      <!-- Texto de derechos reservados -->
+      <p class="text-sm md:text-lg mb-4 font-Quantify">
+        &copy; 2025 Juan Manuel Ramos Rodríguez. Todos los derechos reservados.
+      </p>
+
+      <!-- Enlaces de LinkedIn y GitHub -->
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/juan-manuel-ramos-rodriguez/"
+          class="text-[#39F2AE] hover:text-blue-400 transition duration-500 text-sm font-Space">
+          LinkedIn
+        </a>
+        <a href="https://github.com/juanmanuelramosrodriguez"
+          class="text-[#39F2AE] hover:text-purple-400 transition duration-500 text-sm font-Space">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+
+<router-outlet></router-outlet>
